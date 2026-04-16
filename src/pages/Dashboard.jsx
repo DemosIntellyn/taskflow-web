@@ -13,8 +13,8 @@ export default function Dashboard() {
   }, [])
 
   // BUG 1: TypeError — tasks is null on first render, .tasks.length throws
-  const doneCount = tasks.tasks.filter(t => t.status === 'done').length
-  const inProgressCount = tasks.tasks.filter(t => t.status === 'in_progress').length
+  const doneCount = tasks?.tasks?.filter(t => t.status === 'done').length
+  const inProgressCount = tasks?.tasks?.filter(t => t.status === 'in_progress').length
 
   if (loading) return <div className="animate-pulse text-gray-400">Loading...</div>
 
